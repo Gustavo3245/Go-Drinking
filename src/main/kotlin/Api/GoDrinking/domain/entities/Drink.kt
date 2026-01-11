@@ -1,5 +1,6 @@
 package Api.GoDrinking.domain.entities
 
+import Api.GoDrinking.domain.enums.VolumeUnit
 import Api.GoDrinking.domain.value_objects.AlcoholContent
 import Api.GoDrinking.domain.value_objects.DrinkVolume
 import java.net.URL
