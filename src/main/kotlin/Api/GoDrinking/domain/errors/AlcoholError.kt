@@ -1,8 +1,8 @@
 package Api.GoDrinking.domain.errors
 
 // adicionando dois dos errors mais comuns entre números doubles.
-sealed class AlcoholError {
-    data object TooMuchAlcohol: AlcoholError()
-    data object NegativeAlcohol: AlcoholError()
-    data class InvalidFormat(val messase: String): AlcoholError()
+sealed class AlcoholError(message: String): DomainError(message)  {
+    data object TooMuchAlcohol: AlcoholError("Alcohol content exceeded the limit")
+    data object NegativeAlcohol: AlcoholError("The Alcohol content cannot be negative")
+    data class InvalidFormat( val details: String): AlcoholError("Invalid Alcohol content: $details")
 }
