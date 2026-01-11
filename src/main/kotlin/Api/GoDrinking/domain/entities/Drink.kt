@@ -9,7 +9,7 @@ import java.util.UUID
 data class Drink(
     val id: UUID, //identifier (Entity)
     val name: String,
-    val preparationMethod: String,
+    val preparationMethod: PreparationMethod,
     val alcoholContent: AlcoholContent,
     val ingredients: List<Ingredient>,
     val volume: DrinkVolume,
