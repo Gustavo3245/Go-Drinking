@@ -1,0 +1,26 @@
+package Api.GoDrinking.domain.value_objects
+
+import Api.GoDrinking.domain.enums.VolumeUnit
+import Api.GoDrinking.domain.errors.VolumeError
+import arrow.core.Either
+import arrow.core.left
+import arrow.core.right
+
+data class DrinkVolume (val volume: Double, val unit: VolumeUnit) {
+    companion object {
+
+        fun create(value: Double, unit: VolumeUnit): Either<VolumeError, DrinkVolume> {
+
+            return when {
+                value <= 0.0 -> VolumeError.NegativeVolume.left()
+                else -> DrinkVolume(value, unit).right()
+            }
+        }
+    }
+
+    fun convertedToMl(): Double = when (unit) {
+        VolumeUnit.L -> volume * 1000
+        VolumeUnit.OZ -> volume * 29.57
+        VolumeUnit.ML -> volume
+    }
+}
