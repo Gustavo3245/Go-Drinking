@@ -6,14 +6,14 @@ import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
 
-data class DrinkVolume (val volume: Double, val unit: VolumeUnit) {
+data class Volume (val volume: Double, val unit: VolumeUnit) {
     companion object {
 
-        fun create(value: Double, unit: VolumeUnit): Either<VolumeError, DrinkVolume> {
+        fun create(value: Double, unit: VolumeUnit): Either<VolumeError, Volume> {
 
             return when {
                 value <= 0.0 -> VolumeError.NegativeVolume.left()
-                else -> DrinkVolume(value, unit).right()
+                else -> Volume(value, unit).right()
             }
         }
     }
