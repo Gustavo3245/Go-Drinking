@@ -7,9 +7,12 @@ CREATE TABLE IF NOT EXISTS "recipe" (
 
     FOREIGN KEY ("ingredient_id") REFERENCES "ingredient" ("id") ON DELETE CASCADE,
     FOREIGN KEY ("drink_id") REFERENCES "drink" ("id") ON DELETE RESTRICT
-)
+);
 
-/* 
+/*
+    Essa é uma tabela intermediaria da relação ingredient -> drink
+    um drink pode está presente em uma ou mais bebidas,
+    uma bebida contem um ou mais ingredients.
     recipe deve possui 3 campos principais, quantity, unit e ingredient_id compondo complemente
     a funcionalidade necessaria de apresentar o recipo de ingrediente completo.
 
