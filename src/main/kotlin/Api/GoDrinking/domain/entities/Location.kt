@@ -1,6 +1,7 @@
 package Api.GoDrinking.domain.entities
 
 import Api.GoDrinking.domain.value_objects.Address
+import Api.GoDrinking.domain.value_objects.Coordinate
 import Api.GoDrinking.domain.value_objects.Name
 
 import java.util.UUID
