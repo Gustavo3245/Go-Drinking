@@ -19,8 +19,8 @@ data class Volume (val volume: Double, val unit: VolumeUnit) {
     }
 
     fun convertedToMl(): Double = when (unit) {
-        VolumeUnit.L -> volume * 1000
         VolumeUnit.OZ -> volume * 29.57
         VolumeUnit.ML -> volume
+        VolumeUnit.GRAMS -> volume
     }
 }
