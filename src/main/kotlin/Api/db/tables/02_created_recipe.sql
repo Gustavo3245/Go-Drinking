@@ -7,5 +7,12 @@ CREATE TABLE IF NOT EXISTS "recipe" (
 
     FOREIGN KEY ("ingredient_id") REFERENCES "ingredient" ("id") ON DELETE CASCADE,
     FOREIGN KEY ("drink_id") REFERENCES "drink" ("id") ON DELETE RESTRICT
-
 )
+
+/* 
+    recipe deve possui 3 campos principais, quantity, unit e ingredient_id compondo complemente
+    a funcionalidade necessaria de apresentar o recipo de ingrediente completo.
+
+    ex: 20g de Limão: 20 -> quantity, g -> unit, Limão -> nome do ingredient.
+
+*/

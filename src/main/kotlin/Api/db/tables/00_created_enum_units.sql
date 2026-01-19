@@ -1,1 +1,1 @@
-CREATE TYPE volume_unit_enum AS ENUM ( 'ML', 'L', 'OZ', 'GRAMS');
+CREATE TYPE volume_unit_enum AS ENUM ( 'ML', 'OZ', 'GRAMS');
