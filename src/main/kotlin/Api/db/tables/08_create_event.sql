@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS "event" (
 
     FOREIGN KEY ("creator_id") REFERENCES "user" ("id") ON DELETE CASCADE,
     FOREIGN KEY ("group_id") REFERENCES "group" ("id") ON DELETE SET NULL,
-    FOREIGN KEY ("location_id") REFERENCES "location" ("id")
+    FOREIGN KEY ("location_id") REFERENCES "location" ("id"),
 
     CONSTRAINT check_group_event_consistency CHECK (
         (type = 'GROUP' AND group_id IS NOT NULL) OR
