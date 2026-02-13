@@ -11,6 +11,7 @@ value class PreparationMethod private constructor(val message: String){
         fun create(content: String): Either<PreparationMethodError, PreparationMethod>{
             return when {
                 content.isEmpty() -> PreparationMethodError.WithoutMethod.left()
+                content.length > 512 -> PreparationMethodError.MethodTooBig.left()
                 else -> PreparationMethod(content).right()
             }
         }

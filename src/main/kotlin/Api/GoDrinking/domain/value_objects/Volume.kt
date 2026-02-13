@@ -22,5 +22,6 @@ data class Volume (val volume: Double, val unit: VolumeUnit) {
         VolumeUnit.OZ -> volume * 29.57
         VolumeUnit.ML -> volume
         VolumeUnit.GRAMS -> volume
+        VolumeUnit.L -> volume / 1000
     }
 }
