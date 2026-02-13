@@ -5,7 +5,7 @@ import Api.GoDrinking.domain.value_objects.Volume
 import java.util.UUID
 
 data class RecipeItem(
-    val id: UUID,
+    val id: UUID = UUID.randomUUID(),
     val ingredient: Ingredient,
     val quantity: Volume,
     val unit: VolumeUnit

@@ -8,7 +8,7 @@ import java.net.URL
 import java.util.UUID
 
 data class Drink(
-    val id: UUID, //identifier (Entity)
+    val id: UUID = UUID.randomUUID(), //identifier (Entity)
     val name: Name,
     val preparationMethod: PreparationMethod,
     val alcoholContent: AlcoholContent,
