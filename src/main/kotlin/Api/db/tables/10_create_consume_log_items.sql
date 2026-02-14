@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "consume_log_items" (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID PRIMARY KEY,
     consume_log_id UUID NOT NULL,
     drink_id UUID NOT NULL,
 

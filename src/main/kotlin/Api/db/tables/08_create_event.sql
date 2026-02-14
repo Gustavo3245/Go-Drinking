@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "event" (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID PRIMARY KEY,
     creator_id UUID NOT NULL,
     group_id UUID,
     location_id UUID NOT,

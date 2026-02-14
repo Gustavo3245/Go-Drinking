@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "group" (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID PRIMARY KEY,
     creator_id UUID NOT NULL,
     name VARCHAR(100) NOT NULL,
 
