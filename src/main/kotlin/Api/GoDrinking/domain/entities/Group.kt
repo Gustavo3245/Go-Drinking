@@ -7,11 +7,15 @@ import java.util.UUID
 
 data class Group(
     val id: UUID = UUID.randomUUID(),
+    val inviteCode: UUID,
     val name: Name,           // Value Object Validado
     val description: String?, // texto Opcional
     val iconUrl: Url?,        // Value Object validado com java.net.Url
     val creatorId: UUID,      // Referencia ao User que criou o grupo
     val createdAt: LocalDateTime = LocalDateTime.now(),
     val updateAt: LocalDateTime = LocalDateTime.now()
-
-)
+) {
+    init {
+        fun isOwner(userId: UUID): Boolean = userId == creatorId
+    }
+}
