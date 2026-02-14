@@ -5,8 +5,8 @@ CREATE TABLE IF NOT EXISTS "recipe" (
     ingredient_id UUID NOT NULL,
     drink_id UUID NOT NULL,
 
-    FOREIGN KEY ("ingredient_id") REFERENCES "ingredient" ("id") ON DELETE CASCADE,
-    FOREIGN KEY ("drink_id") REFERENCES "drink" ("id") ON DELETE RESTRICT
+    FOREIGN KEY ("ingredient_id") REFERENCES "ingredient" ("id") ON DELETE RESTRICT,
+    FOREIGN KEY ("drink_id") REFERENCES "drink" ("id") ON DELETE CASCADE
 );
 
 /*
