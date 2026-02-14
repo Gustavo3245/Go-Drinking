@@ -1,7 +1,6 @@
 package Api.GoDrinking.domain.entities
 
 import Api.GoDrinking.domain.enums.GroupRole
-import Api.GoDrinking.domain.enums.Invitation_status
 import java.time.LocalDateTime
 import java.util.UUID
 

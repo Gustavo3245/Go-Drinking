@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS "group_invitation" (
 
     status invitation_status DEFAULT 'Pending',
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    expired_at TIMESTAMP
 
     FOREIGN KEY ("group_id") REFERENCES "group" ("id") ON DELETE CASCADE,
     FOREIGN KEY ("sender_id") REFERENCES "user" ("id"),
