@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "recipe" (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID PRIMARY KEY,
     quantity DOUBLE PRECISION NOT NULL,
     unit volume_unit_enum NOT NULL,
     ingredient_id UUID NOT NULL,

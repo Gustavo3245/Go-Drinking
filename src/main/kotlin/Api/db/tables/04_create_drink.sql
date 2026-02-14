@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "drink" (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID PRIMARY KEY,
     name VARCHAR(100) NOT NULL DEFAULT 'Drink',
 
     preparation_method TEXT,

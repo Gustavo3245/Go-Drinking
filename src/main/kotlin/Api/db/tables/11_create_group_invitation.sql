@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "group_invitation" (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID PRIMARY KEY,
 
     group_id UUID NOT NULL,
     sender_id UUID NOT NULL,

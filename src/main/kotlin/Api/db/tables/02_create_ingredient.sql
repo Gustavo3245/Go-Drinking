@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "ingredient" (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     category VARCHAR(100) NOT NULL,
 
